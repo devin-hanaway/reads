@@ -5,7 +5,13 @@ const pg = require('../db/knex')
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+
+  query.showBooks(req.body)
+  .then(books=>{
+    // console.log(books);
+    console.log(books);
+    res.render('books', {books: books[0]});
+  })
 });
 
 module.exports = router;

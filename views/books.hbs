@@ -1,0 +1,13 @@
+<div class="nav">
+  <h1>Galvanize Reads</h1>
+</div>
+
+{{#each books}}
+  <div class="books">
+    <img src="this.book_pic" alt="">
+    <h1>{{books.title}}</h1>
+    <h2>By:{{books.author}}</h2>
+    <h3>{{books.genre}}</h3>
+    <h4>{{books.description}}</h4>
+  </div>
+{{/each}}

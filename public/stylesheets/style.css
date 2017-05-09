@@ -1,8 +1,37 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color:
 }
 
 a {
   color: #00B7FF;
+}
+
+.nav{
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+}
+
+
+
+.homeNav{
+  box-sizing:content-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.homeAuthor{
+  box-sizing: border-box;
+  width: 20%;
+  height: 20%;
+}
+
+#homePerson{
+
+}
+#homeBook{
+  width: 75%;
+  height: 75%;
 }
