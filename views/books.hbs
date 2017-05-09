@@ -1,13 +1,16 @@
 <div class="nav">
   <h1>Galvanize Reads</h1>
+  <a href="/books">Books</a>
+  <a href="/authors">Authors</a>
+  <a href="/">Home</a>
 </div>
 
 {{#each books}}
   <div class="books">
-    <img src="this.book_pic" alt="">
-    <h1>{{books.title}}</h1>
-    <h2>By:{{books.author}}</h2>
-    <h3>{{books.genre}}</h3>
-    <h4>{{books.description}}</h4>
+    <img src="{{this.book_pic}}" alt="">
+    <h1>{{this.title}}</h1>
+    <h2>By:{{this.author}}</h2>
+    <h3>{{this.genre}}</h3>
+    <h4>{{this.description}}</h4>
   </div>
 {{/each}}

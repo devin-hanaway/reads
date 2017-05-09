@@ -5,10 +5,14 @@ const pg = require('../db/knex')
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.render('/'
-  );
-});
 
+  query.showAuthors(req.body)
+  .then(authors=>{
+    // console.log(books);
+    console.log(authors);
+    res.render('authors', {authors});
+  })
+});
 
 
 module.exports = router;

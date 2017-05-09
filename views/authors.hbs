@@ -1,12 +1,15 @@
 <div class="nav">
   <h1>Galvanize Reads</h1>
+  <a href="/books">Books</a>
+  <a href="/authors">Authors</a>
+  <a href="/">Home</a>
 </div>
 
-{{# each}}
+{{#each authors}}
   <div class="books">
-    <img src="{{auth_pic}}" alt="">
-    <h1>{{first_name}} {{last_name}}</h1>
-    <h2>{{bio}}</h2>
-    <h3>{{genre}}</h3>
+    <img src="{{this.auth_pic}}" alt="">
+    <h1>{{this.first_name}} {{this.last_name}}</h1>
+    <h2>{{this.bio}}</h2>
+    <h3>{{this.genre}}</h3>
   </div>
 {{/each}}

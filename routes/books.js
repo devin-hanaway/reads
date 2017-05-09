@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
   .then(books=>{
     // console.log(books);
     console.log(books);
-    res.render('books', {books: books[0]});
+    res.render('books', {books});
   })
 });
 
