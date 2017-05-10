@@ -13,9 +13,9 @@
   <div class="books">
     <img src="{{this.book_pic}}" alt="">
     <h1>{{this.title}}</h1>
-    <h2>By:{{this.author}}</h2>
+    <h2>By:{{first_name}} {{last_name}}</h2>
     <h3>{{this.genre}}</h3>
     <h4>{{this.description}}</h4>
-    <a href="/books/{{id}}/{{title}}"><button type="button" name="button">View Book</button></a>
+    <a href="books/{{book_id}}/{{title}}"><button type="button" name="button">View Book</button></a>
   </div>
 {{/each}}

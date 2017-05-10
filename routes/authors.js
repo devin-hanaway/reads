@@ -12,6 +12,7 @@ router.get('/', function(req, res, next) {
   .then(authors=>{
     // console.log(books);
     console.log(authors);
+    console.log("poop scoop");
     res.render('authors', {authors});
   })
 });

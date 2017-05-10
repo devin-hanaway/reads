@@ -1,19 +1,26 @@
 var pg = require("./knex")
 
 function showBooks(books, bookAuthors) {
-  console.log(bookAuthors);
-  console.log("poop scoop");
   return pg('books')
-  // .fullOuterJoin('books')
+  .join('book_author', 'books.id', 'book_author.book_id')
+  .join('author', 'author.id', 'book_author.author_id')
+  .select('title','genre','description','book_pic','first_name', 'last_name', 'book_id', 'author_id')
 }
 
 function bookAuthors(data){
   return pg('book_author')
-  
+
 }
+function authors(authors){
+  return pg('author')
+}
+
 
 function showAuthors(authors){
   return pg('author')
+  .join('book_author', 'author.id', 'book_author.author_id')
+  .join('books', 'books.id', 'book_author.book_id')
+  .select('auth_pic','title','first_name', 'last_name', 'book_id', 'author_id')
 }
 
 function singleAuthor(id){
@@ -59,6 +66,19 @@ function newBook(body){
   })
 }
 
+function books(books){
+  return pg('books')
+}
+
+function addJoin(lastObject, authorId){
+  console.log(authorId.author);
+  console.log("poopy pants kjdfnejknf");
+  return pg('book_author').insert({
+    'book_id': lastObject.id,
+    'author_id': authorId.author
+  })
+}
+
 function newAuthor(body){
   return pg('author').insert({
     'auth_pic': body.auth_pic,
@@ -80,5 +100,8 @@ module.exports = {
   deleteBook,
   deleteAuthor,
   newBook,
-  newAuthor
+  newAuthor,
+  authors,
+  books,
+  addJoin
 }

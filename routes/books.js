@@ -9,10 +9,11 @@ const pg = require('../db/knex')
   router.get('/', function(req, res, next) {
     query.bookAuthors()
     .then((bookAuthors) => {
-      console.log(bookAuthors);
+      // console.log(bookAuthors);
     query.showBooks(req.body, bookAuthors)
     .then(books=>{
       // console.log(books);
+      console.log("poop");
       console.log(books);
       res.render('books', {books});
     })
@@ -55,13 +56,31 @@ router.get('/:id/:title/delete', function(req, res){
 })
 
 router.get('/addBook', function (req, res){
-  res.render('addBook')
+  query.authors()
+  .then(authors=>{
+    console.log(authors);
+    res.render('addBook', {authors})
+  })
 })
 
 router.post('/newBook', function (req, res){
+  var authorId = req.body
+  console.log(authorId);
+  console.log("learn some fucking code dude");
   query.newBook(req.body)
   .then(()=>{
-    res.redirect('/books')
+    query.books()
+    .then(books=>{
+      // console.log(books);
+      // console.log("kjdwbfkjwebf kqs;bejkwbcvjkeb");
+      var lastObject = books.pop()
+      // console.log(lastObject)
+      query.addJoin(lastObject, authorId)
+      .then(()=>{
+
+        res.redirect('/books')
+      })
+    })
   })
 })
 
