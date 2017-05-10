@@ -5,11 +5,16 @@
   <a href="/">Home</a>
 </div>
 
+<div class="addAuthor">
+  <a href="/authors/addAuthor"><button type="button" name="button">Add Author</button></a>
+</div>
+
 {{#each authors}}
   <div class="books">
     <img src="{{this.auth_pic}}" alt="">
     <h1>{{this.first_name}} {{this.last_name}}</h1>
     <h2>{{this.bio}}</h2>
     <h3>{{this.genre}}</h3>
+        <a href="/authors/{{id}}/{{first_name}}"><button type="button" name="button">View Author</button></a>
   </div>
 {{/each}}

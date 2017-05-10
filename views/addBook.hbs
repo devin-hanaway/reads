@@ -1,0 +1,30 @@
+<div class="nav">
+  <h1>Galvanize Reads</h1>
+  <a href="/books">Books</a>
+  <a href="/authors">Authors</a>
+  <a href="/">Home</a>
+</div>
+
+<form class="" action="/books/newBook" method="post">
+  <div class="">
+      <label for="book_pic">Add Book Cover Photo URL:</label>
+      <input type="text" name="book_pic" value="" placeholder="enter a URL for the books cover">
+    </div>
+  <div class="">
+      <label for="title">Edit Title:</label>
+      <input type="text" name="title" value="{{title}}" placeholder="enter a new title">
+    </div>
+    <div class="">
+      <label for="author">Edit the author:</label>
+      <input type="text" name="author" value="" placeholder="author opportunities...">
+    </div>
+    <div class="">
+      <label for="genre">Edit Book Genre:</label>
+      <input type="text" name="genre" value="{{genre}}" placeholder="enter book genre..">
+    </div>
+    <div class="">
+      <label for="description">Edit Book Description:</label>
+      <input type="text" name="description" value="{{description}}" placeholder="enter description...">
+    </div>
+    <button type="submit" name="button">Update Book</button>
+</form>

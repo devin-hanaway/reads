@@ -1,0 +1,23 @@
+<div class="nav">
+  <h1>Galvanize Reads</h1>
+  <a href="/books">Books</a>
+  <a href="/authors">Authors</a>
+  <a href="/">Home</a>
+</div>
+
+<img src="{{auth_pic}}" alt="">
+<form class="" action="/authors/{{id}}/{{first_name}}/update" method="post">
+  <div class="">
+      <label for="first_name">Edit First Name:</label>
+      <input type="text" name="first_name" value="{{first_name}}" placeholder="enter a new first_name">
+    </div>
+    <div class="">
+      <label for="last_name">Edit Last Name:</label>
+      <input type="text" name="last_name" value="{{last_name}}" placeholder="enter last name ...">
+    </div>
+    <div class="">
+      <label for="bio">Edit Bio:</label>
+      <input type="text" name="bio" value="{{bio}}" placeholder="enter book bio..">
+    </div>
+    <button type="submit" name="button">Update Author</button>
+</form>
