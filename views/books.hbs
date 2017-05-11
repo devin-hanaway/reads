@@ -1,21 +1,20 @@
-<div class="nav">
-  <h1>Galvanize Reads</h1>
-  <a href="/books">Books</a>
-  <a href="/authors">Authors</a>
-  <a href="/">Home</a>
-</div>
+
 
 <div class="addBook">
   <a href="/books/addBook"><button type="button" name="button">Add Book</button></a>
 </div>
 
 {{#each books}}
-  <div class="books">
-    <img src="{{this.book_pic}}" alt="">
-    <h1>{{this.title}}</h1>
-    <h2>By:{{first_name}} {{last_name}}</h2>
-    <h3>{{this.genre}}</h3>
-    <h4>{{this.description}}</h4>
-    <a href="books/{{book_id}}/{{title}}"><button type="button" name="button">View Book</button></a>
+  <div class="profile row">
+    <img id="bookImg" class="col s2 m2 l2" src="{{this.book_pic}}" alt="">
+    <div class="col s6 m6 l6">
+      <h5>{{this.title}}</h5>
+      <h5>By:{{first_name}} {{last_name}}</h5>
+      <h7>{{this.genre}}</h7>
+      <h8>{{this.description}}</h8>
+    </div>
+    <div class="">
+        <a id="profileButton" href="books/{{book_id}}/{{title}}"><button type="button" name="button">View Book</button></a>
+    </div>
   </div>
 {{/each}}

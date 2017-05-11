@@ -1,17 +1,16 @@
-<div class="nav">
-  <h1>Galvanize Reads</h1>
-  <a href="/books">Books</a>
-  <a href="/authors">Authors</a>
-  <a href="/">Home</a>
-</div>
 
 
-<div class="bookSingle">
-  <img src="{{book_pic}}" alt="">
-  <h1>{{title}}</h1>
-  <h2>By:{{author}}</h2>
-  <h3>{{genre}}</h3>
-  <h4>{{description}}</h4>
-  <a href="/books/{{id}}/{{title}}/edit"><button type="button" name="button">Edit Book</button></a>
-    <a href="/books/{{id}}/{{title}}/delete"><button type="button" name="button">Delete Book</button></a>
+<div class="profile row">
+    <img class="col s2 m2 l2" src="{{book_pic}}" alt="">
+    <div class="col s6 m6 l6">
+      <h5>{{title}}</h5>
+      <h5>By:{{author}}</h5>
+      <h7>{{genre}}</h7>
+      <h8>{{description}}</h8>
+    </div>
+    <div class="col s2 m2 l2">
+      <a href="/books/{{id}}/{{title}}/edit"><button type="button" name="button">Edit Book</button></a>
+      <a href="/books/{{id}}/{{title}}/delete"><button type="button" name="button">Delete Book</button></a>
+    </div>
+
 </div>

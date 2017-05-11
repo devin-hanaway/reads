@@ -1,7 +1,8 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color:
+}
+main{
+  padding-top: 20vh
 }
 
 a {
@@ -9,12 +10,19 @@ a {
 }
 
 .nav{
-  box-sizing: border-box;
   background-color: black;
   color: white;
 }
 
-
+button{
+  margin: 2em;
+  color:black;
+  background-color: white;
+  border: 1px solid black;
+}
+html{
+  background-color: #373F47;
+}
 
 .homeNav{
   box-sizing:content-box;
@@ -27,9 +35,22 @@ a {
   width: 20%;
   height: 20%;
 }
-img{
+#editPic{
   width: 20%;
   height: 20%;
+}
+
+
+.profile{
+  box-sizing: border-box;
+  border: 1px solid black;
+  font-family:mplus-1p, Helvetica, arial, freesans, clean, sans-serif;
+  background-color: white;
+  padding: 1em;
+}
+#profileButton{
+  color: black;
+  padding-top: 20vh;
 }
 
 #homePerson{

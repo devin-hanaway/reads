@@ -20,7 +20,7 @@ function showAuthors(authors){
   return pg('author')
   .join('book_author', 'author.id', 'book_author.author_id')
   .join('books', 'books.id', 'book_author.book_id')
-  .select('auth_pic','title','first_name', 'last_name', 'book_id', 'author_id')
+  .select('auth_pic','title','first_name', 'last_name', 'book_id','bio', 'author_id')
 }
 
 function singleAuthor(id){

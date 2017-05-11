@@ -2,9 +2,24 @@
 <html>
   <head>
     <title>{{title}}</title>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
     <link rel="stylesheet" href="/stylesheets/style.css"/>
   </head>
+
   <body>
-    {{{body}}}
+    <nav>
+      <div class="nav">
+        <h1>Galvanize Reads</h1>
+        <a href="/books">Books  |</a>
+        <a href="/authors">Authors  |</a>
+        <a href="/">Home</a>
+      </div>
+    </nav>
+    <main class="container">
+      {{{body}}}
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    </main>
+
   </body>
 </html>
