@@ -5,6 +5,17 @@ main{
   padding-top: 20vh
 }
 
+#logo{
+  /*width: 30%;
+  height: 30%;*/
+  width: 26em;
+  height: 8em;
+}
+.right{
+  margin-right: 2em;
+  margin-top: 2em
+}
+
 a {
   color: #00B7FF;
 }
@@ -48,15 +59,15 @@ html{
   background-color: white;
   padding: 1em;
 }
-#profileButton{
+/*#profileButton{
   color: black;
   padding-top: 20vh;
-}
+}*/
 
-#homePerson{
-
+#home{
+  width: 30em;
+  height: 30em;
 }
-#homeBook{
-  width: 75%;
-  height: 75%;
-}
+/*#homeAuthor{
+  margin-left: 10em;
+}*/

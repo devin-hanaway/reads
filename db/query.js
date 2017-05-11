@@ -24,11 +24,17 @@ function showAuthors(authors){
 }
 
 function singleAuthor(id){
-  return pg('author').where('id', id)
+  return pg('author').where('author_id', id)
+  .join('book_author', 'author.id', 'book_author.author_id')
+  .join('books', 'books.id', 'book_author.book_id')
+  .select('auth_pic','title','first_name', 'last_name', 'book_id','bio', 'author_id')
 }
 
 function singleBook(id){
-  return pg('books').where('id', id)
+  return pg('books').where('book_id', id)
+  .join('book_author', 'books.id', 'book_author.book_id')
+  .join('author', 'author.id', 'book_author.author_id')
+  .select('title','genre','description','book_pic','first_name', 'last_name', 'book_id', 'author_id')
 }
 
 function authorUpdate(body, id){

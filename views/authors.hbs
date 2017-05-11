@@ -11,9 +11,9 @@
       <h5>{{this.first_name}} {{this.last_name}}</h5>
       <h6>{{this.bio}}</h6>
       <h6><b>Books By {{this.first_name}}:<b></h6>
-      <ul>
-        <li>{{this.title}}</li>
-      </ul>
+        <ul>
+          <a href="/books/{{book_id}}/{{title}}"><li>{{this.title}}</li></a>
+        </ul>
     </div>
         <a href="/authors/{{author_id}}/{{first_name}}"><button type="button" name="button">View Author</button></a>
   </div>

@@ -4,6 +4,10 @@
   <div class="col s6 m6 l6">
     <h4>{{first_name}} {{last_name}}</h4>
     <h6>{{bio}}</h6>
+    <h6><b>Books By {{first_name}}:<b></h6>
+    <ul>
+      <a href="/books/{{book_id}}/{{title}}"><li>{{this.title}}</li></a>
+    </ul>
   </div>
       <a href="/authors/{{id}}/{{first_name}}/edit"><button type="button" name="button">Edit Author</button></a>
       <a href="/books/{{id}}/{{first_name}}/delete"><button type="button" name="button">Delete Author</button></a>
